@@ -1,3 +1,4 @@
+package testu;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
@@ -11,10 +12,13 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.text.Position;
+
+import testu.view2;
 
 public class login extends JFrame implements ActionListener {
 
@@ -59,14 +63,14 @@ public class login extends JFrame implements ActionListener {
         submit = new JButton("ANMELDEN");
         fontplus = new JButton("+");
         
-        //Die Texte wurden hinzugef¸gt
+        //Die Texte wurden hinzugefÂ¸gt
         maillabel.setText("Mail :");
         passwordlabel.setText("Password :");
         
-        //Das Label wurde zum Panel (northpanel) hinzugef¸gt
+        //Das Label wurde zum Panel (northpanel) hinzugefÂ¸gt
         northpanel.add(jimages, BorderLayout.CENTER);
         
-        //Ein Label wurde zum Westpanel hinzugef¸gt
+        //Ein Label wurde zum Westpanel hinzugefÂ¸gt
         westpanel.add(westlabel, BorderLayout.WEST);
         
         eastpanel.add(eastlabel, BorderLayout.EAST);
@@ -100,7 +104,7 @@ public class login extends JFrame implements ActionListener {
         add(westpanel, BorderLayout.WEST);
         add(eastpanel, BorderLayout.EAST);
         
-        setTitle("Wer wird Millionär?-Login");
+        setTitle("Quiz-Login");
         setSize(500, 400);
         setVisible(true);
         setResizable(false);
@@ -121,9 +125,10 @@ public class login extends JFrame implements ActionListener {
         String password = passwordtext.getText();
     	
         if (userName.trim().equals("jan.rosamilia@gmx.ch") && password.trim().equals("corona")) {
-        	  view2 fr = new view2();
-              fr.setVisible(true);
+        	  view2 frame = new view2();
+              frame.setVisible(true);
               setVisible(false);
+              
             
         }  {
         	mailtext.setText("");
